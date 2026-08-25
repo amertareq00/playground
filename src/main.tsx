@@ -6,6 +6,19 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import App from "./App";
 import "./index.css";
 
+// Just to know that we can configur what ever we want here
+// const queryClient = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       retry: 3,
+//       cacheTime: 300_000, // 5m
+//       staleTime: 10 * 1000, // 10s
+//       refetchOnWindowFocus: false,
+//       refetchOnReconnect: false,
+//       refetchOnMount: false,
+//     },
+//   },
+// });
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
