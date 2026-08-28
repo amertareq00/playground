@@ -1,13 +1,16 @@
 import { useContext, useReducer, useState } from "react";
 import tasksReducer from "./reducers/tasksReducer";
 import TaskContext from "./contexts/tasksContext";
+import AuthContext from "./contexts/authContext";
 
 const TaskList = () => {
   const { tasks, dispatch } = useContext(TaskContext);
-
+  const { user } = useContext(AuthContext);
   return (
     <>
+      <p>User: {user}</p>
       <button
+        disabled={user === ""}
         onClick={() =>
           dispatch({
             type: "ADD",
@@ -26,6 +29,7 @@ const TaskList = () => {
           >
             <span className="flex-grow-1">{task.title}</span>
             <button
+              disabled={user === ""}
               className="btn btn-outline-danger"
               onClick={() =>
                 dispatch({
