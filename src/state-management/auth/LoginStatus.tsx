@@ -1,4 +1,4 @@
-import useAuth from "./auth/useAuth";
+import useAuth from "./useAuth";
 
 const LoginStatus = () => {
   const { user, dispatch } = useAuth();
