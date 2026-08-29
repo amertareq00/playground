@@ -1,4 +1,4 @@
-import LoginStatus from "./LoginStatus";
+import LoginStatus from "./auth/LoginStatus";
 import { useContext } from "react";
 import TaskContext from "./tasks/tasksContext";
 
