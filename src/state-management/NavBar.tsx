@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import TaskContext from "./contexts/tasksContext";
+import useTasks from "./hooks/useTasks";
 import LoginStatus from "./LoginStatus";
 
 const NavBar = () => {
-  const { tasks } = useContext(TaskContext);
+  const { tasks } = useTasks();
   return (
     <nav className="navbar d-flex justify-content-between">
       <span className="badge text-bg-secondary">{tasks.length}</span>
